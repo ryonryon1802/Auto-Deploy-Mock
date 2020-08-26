@@ -1,0 +1,5 @@
+<h1>VirtualMachine#new</h1>
+<%= form_with model: @virtual_machine, url: "/create" do |form| %>
+    <%= form.text_field :ipaddress %>
+    <%= form.submit "submit" %>
+<% end %>
