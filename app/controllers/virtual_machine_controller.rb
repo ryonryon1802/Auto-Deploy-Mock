@@ -37,6 +37,12 @@ class VirtualMachineController < ApplicationController
     end
   end
 
+  def destroy
+    VirtualMachine.find(params[:id]).destroy
+    flash[:notice] = "Success"
+    redirect_to "/virtual_machines"
+  end
+
   private
     def virtual_machine_params
       params.require(:virtual_machine).permit(:ipaddress)
