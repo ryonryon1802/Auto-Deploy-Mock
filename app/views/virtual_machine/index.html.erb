@@ -2,5 +2,5 @@
 IP ADDRESS<br>
 <% @virtual_machines.each do |virtual_machine| %>
     <%= virtual_machine.ipaddress %>
-    <br>
+    <%= button_to("削除", "/virtual_machines/#{virtual_machine.id}", { method: :delete, data: { confirm: "本当に削除しますか？" } } ) %>
 <% end %>
