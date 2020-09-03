@@ -5,10 +5,6 @@ class VirtualMachineController < ApplicationController
     @virtual_machines = VirtualMachine.all
   end
 
-  def show
-    @virtual_machine = VirtualMachine.find(params[:id])
-  end
-
   def new
     @virtual_machine = VirtualMachine.new
   end
@@ -21,6 +17,10 @@ class VirtualMachineController < ApplicationController
     else
       render virtual_machines_new_path
     end
+  end
+
+  def show
+    @virtual_machine = VirtualMachine.find(params[:id])
   end
 
   def edit

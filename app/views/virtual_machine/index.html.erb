@@ -1,6 +1,18 @@
-<h1>VirtualMachine#index</h1>
-IP ADDRESS<br>
+<ul class="title">
+    <li>
+        <div>ID</div>
+    </li>
+    <li>
+        <div>IP ADDRESS</div>
+    </li>
+</ul>
 <% @virtual_machines.each do |virtual_machine| %>
-    <%= virtual_machine.ipaddress %>
-    <%= button_to("削除", "/virtual_machines/#{virtual_machine.id}", { method: :delete, data: { confirm: "本当に削除しますか？" } } ) %>
+    <ul class="content">
+        <li>
+            <%= "#{virtual_machine.id}" %>
+        </li>
+        <li>
+            <%= link_to("#{virtual_machine.ipaddress}", "/virtual_machines/#{virtual_machine.id}") %>
+        </li>
+    </ul>
 <% end %>

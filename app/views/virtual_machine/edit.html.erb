@@ -1,5 +1,3 @@
-<h1>VirtualMachine#index</h1>
-<%= "current_ipaddress: #{@virtual_machine.ipaddress}" %>
 <%= form_with model: @virtual_machine, url: "/virtual_machines/#{@virtual_machine.id}" do |form| %>
     <%= form.text_field :ipaddress %>
     <%= form.submit "submit" %>
