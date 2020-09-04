@@ -1,3 +1,71 @@
 // Place all the styles related to the VirtualMachine controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    margin: 0px 0px 10px 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+// applicationページ
+header {
+    display: flex;
+    background: black;
+    height: 80px;
+    width: auto;
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+        margin: auto 0;
+        justify-content: flex-start;
+    }
+    a:hover {
+        color: orange;
+    }
+    ul {
+        padding-inline-start: 0px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+        margin: auto 0 auto auto;
+        align-items: center;
+    }
+}
+
+.title {
+    display: flex;
+}
+// indexページ
+.content {
+    display: flex;
+    li {
+        margin: 10px;
+        a {
+            color: blue($color: #000000);
+            text-decoration: none;
+        }
+        a:visited {
+            color: purple;
+        }
+        a:hover {
+            color: orange;
+        }
+    }
+}
+
+// showページ
+.action_link {
+    display: flex;
+}
+
+.container {
+    ul {
+        padding-inline-start: 0px;
+        text-align: left;
+    }
+}

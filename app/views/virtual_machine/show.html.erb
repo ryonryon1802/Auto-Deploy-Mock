@@ -1,2 +1,13 @@
-<h1>VirtualMachine#show</h1>
-<%= @virtual_machine.ipaddress %>
+<div class="container">
+    <p>
+        <%= @virtual_machine.ipaddress %>
+    </p>
+    <ul class="action_link">
+        <li>
+            <%= link_to("編集", "/virtual_machines/#{@virtual_machine.id}/edit") %>
+        </li>
+        <li>
+            <%= link_to("削除", "/virtual_machines/#{@virtual_machine.id}", method: :delete) %>
+        </li>
+    </ul>
+</div>
