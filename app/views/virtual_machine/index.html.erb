@@ -1,18 +1,20 @@
-<ul class="title">
-    <li>
-        <div>ID</div>
-    </li>
-    <li>
-        <div>IP ADDRESS</div>
-    </li>
-</ul>
-<% @virtual_machines.each do |virtual_machine| %>
-    <ul class="content">
+<div>
+    <ul class="title">
         <li>
-            <%= "#{virtual_machine.id}" %>
+            <div>ID</div>
         </li>
         <li>
-            <%= link_to("#{virtual_machine.ipaddress}", "/virtual_machines/#{virtual_machine.id}") %>
+            <div>IP ADDRESS</div>
         </li>
     </ul>
-<% end %>
+    <% @virtual_machines.each do |virtual_machine| %>
+        <ul class="content">
+            <li>
+                <%= "#{virtual_machine.id}" %>
+            </li>
+            <li>
+                <%= link_to("#{virtual_machine.ipaddress}", "/virtual_machines/#{virtual_machine.id}") %>
+            </li>
+        </ul>
+    <% end %>
+</div>

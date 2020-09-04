@@ -1,6 +1,4 @@
 class VirtualMachineController < ApplicationController
-  #require 'pry'
-
   def index
     @virtual_machines = VirtualMachine.all
   end
@@ -10,6 +8,7 @@ class VirtualMachineController < ApplicationController
   end
 
   def create
+    sleep 10
     @virtual_machine = VirtualMachine.new(virtual_machine_params)
     if @virtual_machine.save
       flash[:notice] = "Success"

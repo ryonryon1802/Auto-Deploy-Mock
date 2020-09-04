@@ -1,4 +1,7 @@
-<%= form_with model: @virtual_machine, url: "/virtual_machines/#{@virtual_machine.id}" do |form| %>
-    <%= form.text_field :ipaddress %>
-    <%= form.submit "submit" %>
-<% end %>
+<div class="container">
+    <p>IP ADDRESS</p>
+    <%= form_with model: @virtual_machine, url: "/virtual_machines/#{@virtual_machine.id}", html: {class: "form"} do |form| %>
+        <%= form.text_field :ipaddress %>
+        <%= form.submit "submit", class: "form_button" %>
+    <% end %>
+</div>
